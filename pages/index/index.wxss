@@ -1,0 +1,5 @@
+/**index.wxss**/
+
+.message {
+  height: 250rpx;
+}

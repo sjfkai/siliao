@@ -1,0 +1,17 @@
+.secretInput{
+  margin-bottom: 25rpx;
+  background-color: #FFF;
+  border: 1px solid #C3C0B3;
+  border-radius: 5px;
+}
+.button {
+  width: 100%;
+}
+
+.blank {
+  /* height: 500rpx; */
+}
+
+.unlocked{
+  min-height: 500rpx;
+}

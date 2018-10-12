@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container" >
+  <view class="weui-cells__title">请输入您要发送的消息：</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea 
+          class="weui-textarea message" 
+          auto-focus  
+          bindinput="bindMessageInput" 
+        />
+        <view class="weui-textarea-counter">{{message.length}}/{{messageMaxLength}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">密码：</view>
+  <view class="weui-cells__tips tips">本密码无从找回，请您牢记</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+              <input class="weui-input" bindinput="bindSecretInput" />
+          </view>
+      </view>
+  </view>
+  <view class="weui-cells__title">密码提示（可选）：</view>
+  <view class="weui-cells__tips tips">对密码的描述，可用于提示您的好友</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+              <input class="weui-input" bindinput="bindRemindInput" />
+          </view>
+      </view>
+  </view>
+
+   <button 
+      class="weui-btn"
+      size="default"
+      bindtap="toPreview"
+      disabled="{{!message || !secret}}"
+    >
+      预览
+    </button>
+    <button
+      class="weui-btn"
+      type="primary"
+      size="default"
+      open-type="share"
+      disabled="{{!message || !secret}}"
+    >
+      发送
+    </button>
+</view>

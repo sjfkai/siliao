@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import "./lib/weui.wxss";
+
+page {
+ background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.container {
+  padding: 50rpx;
+  box-sizing: border-box;
+} 
+
+.tips{
+  font-size: 8pt;
+}
+

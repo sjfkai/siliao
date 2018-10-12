@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container" >
+  <view class="weui-cells__title">这是一条加密消息</view>
+  <view class="weui-cell">
+    <image wx:if="{{!message}}" mode="aspectFit" src="../../assets/images/icon2.png" class="locked" />
+    <text wx:else class="unlocked">{{message}}</text>
+  </view>
+  <view class="weui-cells__title">请输入密码</view>
+  <view class="weui-cells__tips tips">提示：{{remind}}</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" bindinput="bindSecretInput" />
+        </view>
+    </view>
+  </view>
+  <button disabled="{{!secret}}" class="weui-btn" type="primary" bindtap="decode">解密</button>
+
+  <button 
+    class="weui-btn"
+    wx:if="{{isPreview}}"
+    size="default"
+    open-type="share"
+  >
+    发送
+  </button>
+  <button 
+    wx:else
+    class="weui-btn"
+    size="default"
+    bindtap="toSend"
+  >
+    回复
+  </button>
+</view>
