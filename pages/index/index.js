@@ -13,11 +13,16 @@ Page({
   onLoad: function () {
   },
   onShareAppMessage: function(res) {
-    return {
-      title: '您有一条加密消息，请查看',
-      path: `pages/message/message?message=${utils.encode(this.data.message, this.data.secret)}&remind=${this.data.remind}`,
-      imageUrl: '../../assets/images/share.png',
+    if (res.from === 'button') {
+      // 发送消息
+      return {
+        title: '您有一条加密消息，请查看',
+        path: `pages/message/message?message=${utils.encode(this.data.message, this.data.secret)}&remind=${this.data.remind}`,
+        imageUrl: '../../assets/images/share.png',
+      }
     }
+
+    return;
   },
 
   toPreview: function() {
