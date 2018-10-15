@@ -14,4 +14,5 @@
 
 .unlocked{
   min-height: 500rpx;
+  word-break:break-all;
 }

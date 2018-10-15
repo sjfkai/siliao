@@ -2,8 +2,7 @@
 <view class="container" >
   <view class="weui-cells__title">这是一条加密消息</view>
   <view class="weui-cell">
-    <image wx:if="{{!message}}" mode="aspectFit" src="../../assets/images/icon2.png" class="locked" />
-    <text wx:else class="unlocked">{{message}}</text>
+    <text class="unlocked" selectable>{{message || encodedMessage}}</text>
   </view>
   <view class="weui-cells__title">请输入密码</view>
   <view class="weui-cells__tips tips">提示：{{remind}}</view>
@@ -22,7 +21,7 @@
     size="default"
     open-type="share"
   >
-    发送
+    分享
   </button>
   <button 
     wx:else
