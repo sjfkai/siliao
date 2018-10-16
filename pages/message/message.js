@@ -20,9 +20,9 @@ Page({
   },
   onLoad: function (query) {
     if (query.isPreview) {
-      wx.setNavigationBarTitle({
-        title: '预览',
-      })
+      // wx.setNavigationBarTitle({
+      //   title: '预览',
+      // })
     }
     this.setData({
       encodedMessage: query.message || this.data.encodedMessage,

@@ -43,7 +43,7 @@
 					"id": 0,
 					"name": "message",
 					"pathName": "pages/message/message",
-					"query": "message=U2FsdGVkX1+41HjpWacI1FGZQ5SnkShRKCKRU1cr9mo&remind="
+					"query": "message=U2FsdGVkX1+41HjpWacI1FGZQ5SnkShRKCKRU1cr9mo&remind=&isPreview=true"
 				}
 			]
 		}
